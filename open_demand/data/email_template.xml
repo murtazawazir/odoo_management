@@ -1,0 +1,243 @@
+<odoo>
+    <data>
+        <record id="mail_template_send" model="mail.template">
+            <field name="name">Email Template</field>
+            <field name="model_id" ref="open_demand.model_sb_open_demand"/>
+            <field name="subject">Dear Team Members</field>
+            <field name="email_from">{{user.email_formatted}}</field>
+            <field name="model_id" ref="open_demand.model_sb_open_demand"/>
+            <field name="body_html" type="html">
+                <div>
+                    <table width="40%" style="border-collapse:collapse">
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Request No
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Requirement Received Date
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.requirement_received_date"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Acknowledgment
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.is_acknowledgment"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Client
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.client_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Project
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.project_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Worksite
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.worksite_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Region
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.region_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Country
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.country_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">City
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.city_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Vendor
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.vendor_ids.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Opportunity Type
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.opportunity_type"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Expected Revenue
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.expected_revenue"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Probability
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.probability"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Resource Type
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.resource_type_id"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Assigned Date
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.assigned_date"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Current Owner
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.assign_ids.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Target date expected by Delivery Team / Client
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.expected_delivery_date"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Days per Week
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.days_per_week"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Priority
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.priority"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Recruitment / FSM Committed Date
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.committed_date"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Skillset
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.skill_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Vendor Committed Date
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.vendor_committed_date"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Language
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.language_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Target Rate
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.target_rate"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Level
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.global_level"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Maximum Target Rate
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.max_target_rate"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Local Language
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.local_language_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Target Rate Duration
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.target_rate_duration"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Level
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.local_level"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Currency
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.currency_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Required Quantity
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.required_quantity"/>
+                            </td>
+                        </tr>
+                        <tr style="border:1px solid black">
+                            <td style="border:1px solid black">Job Description
+                            </td>
+                            <td style="border:1px solid black">
+                                <span t-field="object.job_description"/>
+                            </td>
+                        </tr>
+
+
+                    </table>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>
