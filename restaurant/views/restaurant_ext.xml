@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+        <record id="restaurant_view_form_id" model="ir.ui.view">
+            <field name="name">restaurant_view_form</field>
+            <field name="model">rest.staff</field>
+            <field name="arch" type="xml">
+                <form string="Restaurant">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="age"/>
+                                <field name="date"/>
+                                <field name="mobile"/>
+                            </group>
+                            <group>
+                                <field name="email"/>
+                                <field name="country_id"/>
+                                <field name="country_code"/>
+                                <field name="country_ids" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name='restaurant_staff' string="Restaurant Staff">
+                                <field name=""/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="restaurant_view_tree_id" model="ir.ui.view">
+            <field name="name">restaurant_view_tree</field>
+            <field name="model">rest.staff</field>
+            <field name="arch" type="xml">
+                <tree string="restaurant_tree">
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="date"/>
+                    <field name="country_id" widget="many2onebutton"/>
+                    <field name="country_ids" widget="many2many_tags"/>
+                    <field name="mobile"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+        <record id="restaurant_view_action_id" model="ir.actions.act_window">
+            <field name="name">Restaurant</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">rest.staff</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+        <menuitem id="restaurant_menuitem_id" web_icon="restaurant,static/description/icon.png" name="Restaurant"
+                  action="restaurant_view_action_id"/>
+    </data>
+</odoo>
